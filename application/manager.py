@@ -10,7 +10,13 @@ def index():
 
 @app.route('/count')
 def count():
-	return render_template('info/count.html', title = 'Click count')
+	for a in range(1000):
+		if a>0:
+			return render_template('info/count.html', title = 'Click count', count=a)
+			a += 1
+# def a():
+# 	reload(count)
+# 	return render_template('info/count.html', title = 'Click count', count=a+1)
 
 # @app.route('/hello/<username>/')
 # def hello_username(username):
